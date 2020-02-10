@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Formulario Registro</title>
+
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-labels-on-top.css">
+
+</head>
+    
+
+	<header>
+		<h1 class="titulo">Bases de Datos Master Tech</h1>
+        <a href="" class="registro">Registrate</a>
+    </header>
+    <style>
+     img[src*="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+        }
+    img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+        }
+    </style>
+    <br>
+
+    <div class="main-content">
+
+        <!-- You only need this form and the form-labels-on-top.css -->
+
+        <form class="form-labels-on-top" method="POST" action="conexion.php">
+
+            <div class="form-title-row">
+                <h1>Formulario de Registro</h1>
+            </div>
+
+             <div class="form-row">
+                <label>
+                    <span>Nombres</span>
+                    <input type="text" name="nombres_" id="nombres_" required="required" placeholder="Escribe tus nombres">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Apellidos</span>
+                    <input type="text" name="apellidos_" id="apellidos_" required="required" placeholder="Escribe tus apellidos">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>DPI</span>
+                    <input type="number" name="dpi_" id="dpi_" required="required" placeholder="8901234567890">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Telefono</span>
+                    <input type="number" name="telefono_" id="telefono_" required="required" placeholder="Escribe tu telefono">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Edad</span>
+                    <input type="number" name="edad_" id="edad_" required="required" placeholder="Escribe tu edad">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Correo</span>
+                    <input type="email" name="correo_" id="correo_" required="required" placeholder="Escribe tu email">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Genero</span>
+                    <select name="genero_" id="genero_">
+                        <option>Otro</option>
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Lugar de Origen</span>
+                    <select name="departamento_" id="departamento_">
+                        <option>Departamento</option>
+                        <option>Alta Verapaz</option>
+                        <option>Baja Verapaz</option>
+                        <option>Chimaltenango</option>
+                        <option>Chiquimula</option>
+                        <option>Petén</option>
+                        <option>El Progreso</option>
+                        <option>Quiché</option>
+                        <option>Escuintla</option>
+                        <option>Guatemala</option>
+                        <option>Huehuetenango</option>
+                        <option>Izabal</option>
+                        <option>Jalapa</option>
+                        <option>Jutiapa</option>
+                        <option>Quetzaltenango</option>
+                        <option>Sacatepéquez</option>
+                        <option>Sacatepequez</option>
+                        <option>San Marcos</option>
+                        <option>Santa Rosa</option>
+                        <option>Sololá</option>
+                        <option>Suchitepéquez</option>
+                        <option>Totonicapán</option>
+                        <option>Zacapa</option>
+                    </select>
+                </label>
+            </div>
+
+             <div class="form-row">
+                <label>
+                    <span>Qué Estudias?</span>
+                    <select name="estudio_" id="estudio_">
+                        <option>Carrera</option>
+                        <option>Ingeneria</option>
+                        <option>Arquitectura</option>
+                        <option>Doctor</option>
+                        <option>Abogado</option>
+                        <option>Comunicador</option>
+                        <option>Sicologo</option>
+                        <option>Nutricionista</option>
+                        <option>Administrador</option>
+                        <option>Deportista</option>
+                        <option>Matematico</option>
+                        <option>Fisico</option>
+                        <option>Técnico</option>
+                        <option>Artista</option>
+                        <option>Musico</option>
+                        <option>Diseñador</option>
+                        <option>Mecanico</option>
+                        <option>Carpintero</option>
+                        <option>Ganadero</option>
+                        <option>Agricultor</option>
+                        <option>Actor</option>
+                        <option>Animador</option>
+                        <option>Politico</option>
+                    </select>
+                </label>
+            </div>
+
+            
+            <div class="form-row">
+                <label>
+                    <span>Comentarios</span>
+                    <textarea name="comentario_" id="comentario_" required="required" placeholder="Escribe tus comentarios" rows="30" cols="15"></textarea>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" value="Enviar">Enviar</button>
+                <button type="reset" value="Borrar">Borrar</button>
+            </div>
+
+        </form>
+
+    </div>
+    <footer><h1 class="pie">Formulario JDesigner.hol.es</h1></footer>
+</body>
+
+</html>

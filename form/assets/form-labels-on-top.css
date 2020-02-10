@@ -1,0 +1,199 @@
+body{
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-image: url(../img/fondo.jpg);
+}
+header{
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/fondo_5.jpg);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    font-family: comic sans ms;
+    font-weight: bold;
+}
+h1{
+    font-family: comic sans ms;
+    font-weight: bold;
+    text-shadow: 0.01em 0.05em black;
+}
+.titulo{
+    font-family: comic sans ms;
+    font-weight: bold;
+    text-shadow: 0.01em 0.05em black;
+}
+.pie{
+    font-family: comic sans ms;
+    font-weight: bold;
+    text-shadow: 0.01em 0.05em black;
+    font-size: 1em;
+    color:yellow;
+    text-align: center;
+}
+.registro{
+    background-color: black;
+    cursor: pointer;
+}
+
+.form-labels-on-top{
+    box-sizing: border-box;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 55px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/fondo_.jpg);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 6);
+    font: bold 14px sans-serif;
+    text-align: center;
+}
+
+.form-labels-on-top .form-row{
+    text-align: left;
+    max-width: 415px;
+    margin: 25px auto 0;
+}
+
+.form-labels-on-top .form-title-row{
+    margin: 0 auto 40px;
+}
+
+.form-labels-on-top h1{
+    display: inline-block;
+    box-sizing: border-box;
+    color: blue;
+    font-size: 24px;
+    padding: 0 0 12px 0;
+    margin: 0;
+    border-bottom: 2px solid #6CAEE0;
+}
+
+.form-labels-on-top .form-row > label span{
+    display: block;
+    box-sizing: border-box;
+    color:  black;
+    width: 200px;
+    padding: 0 0 12px;
+}
+
+.form-labels-on-top input{
+    font-weight: bold;
+    color:  white;
+    box-sizing: border-box;
+    width: 420px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 5);
+    padding: 12px 18px;
+    border: 1px solid #dbdbdb;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/fondo_6.jpg);
+    border-radius: 10px;
+}
+.form-labels-on-top input:hover{
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/fondo_65.jpg);
+}
+
+.form-labels-on-top input[type=radio],
+.form-labels-on-top input[type=checkbox]{
+    box-shadow: none;
+    width: auto;
+}
+
+.form-labels-on-top select{
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/fondo_65.jpg);
+    background-color: #003300;
+    color:  yellow;
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 420px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 5);
+    padding: 12px 18px;
+    border: 1px solid #dbdbdb;
+    font-family: comic sans ms;
+}
+
+.form-labels-on-top select:hover{
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../img/fondo_6.jpg);
+}
+
+.form-labels-on-top .form-radio-buttons > div{
+    margin-bottom: 10px;
+}
+
+.form-labels-on-top .form-radio-buttons label span{
+    margin-left: 8px;
+    color:  #5f5f5f;
+    font-weight: normal;
+}
+
+.form-labels-on-top .form-radio-buttons input{
+    width: auto;
+}
+
+.form-labels-on-top button{
+    border-radius: 2px;
+    background-color: black;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 22px;
+    border: 0;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: comic sans ms;
+    text-align: center;
+}
+.form-labels-on-top button:hover{
+    background-color: blue;
+    color:yellow;
+}
+
+textarea{
+    color:  white;
+    box-sizing: border-box;
+    width: 420px;
+    height: 160px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    font-weight: bold;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+     background-position: center center;
+    background-size: cover;
+    background-image: url(../img/fondo_6.jpg);
+}
+::placeholder { 
+    color: #58FAF4; 
+}
+
+/*	Making the form responsive. Remove this media query
+    if you don't need the form to work on mobile devices. */
+
+@media screen and (max-width: 600px) {
+
+    .form-labels-on-top{
+        padding: 30px;
+    }
+
+    .form-labels-on-top input{
+        width: 100%;
+    }
+    .form-labels-on-top{
+        width: 95%;
+    }
+    .form-labels-on-top select{
+         width: 100%;
+    }
+    textarea{
+        width: 100%;
+    }
+
+}

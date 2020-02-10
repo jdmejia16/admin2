@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Galeria de Fotos</title>
+</head>
+<style>
+img{
+	filter: grayscale(100%);
+	transition: all 4s ease-in-out;
+}
+img:hover{
+	filter: grayscale(0);
+	transition: all 4s ease-in-out;
+	transform: scale(2,2);
+}
+/*img:active{
+	filter: sepia(100%);
+	transition: all 4s ease-in-out;
+}
+</style>
+<style>
+ img[src*="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+        }
+ img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+        }
+</style>
+<body>
+<script type="text/javascript">
+//Ancho (en pixeles)
+var sliderwidth="1024px"
+//Alto
+var sliderheight="250px"
+//Velocidad 1-10
+var slidespeed=2
+//Color de fondo:
+slidebgcolor=""
+
+//Vínculos y enlaces de las imágenes
+var leftrightslide=new Array()
+var finalslide=''
+leftrightslide[0]='<img border="0" src="6.png" height="150px">'
+leftrightslide[1]='<img border="0" src="15.png" height="150px">'
+leftrightslide[2]='<img border="0" src="8.png" height="150px">'
+leftrightslide[3]='<img border="0" src="10.png" height="150px">'
+leftrightslide[4]='<img border="0" src="11.png" height="150px">'
+leftrightslide[5]='<img border="0" src="12.png" height="150px">'
+leftrightslide[6]='<img border="0" src="13.png" height="150px">'
+leftrightslide[7]='<img border="0" src="14.png" height="150px">'
+leftrightslide[8]='<img border="0" src="15.png" height="150px">'
+leftrightslide[9]='<img border="0" src="12.png" height="150px">'
+
+var imagegap=""
+var slideshowgap=10
+
+
+var copyspeed=slidespeed
+leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
+var iedom=document.all||document.getElementById
+if (iedom)
+document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+var actualwidth=''
+var cross_slide, ns_slide
+
+function fillup(){
+if (iedom){
+cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+cross_slide2.style.left=actualwidth+slideshowgap+"px"
+}
+else if (document.layers){
+ns_slide=document.ns_slidemenu.document.ns_slidemenu2
+ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+ns_slide.document.write(leftrightslide)
+ns_slide.document.close()
+actualwidth=ns_slide.document.width
+ns_slide2.left=actualwidth+slideshowgap
+ns_slide2.document.write(leftrightslide)
+ns_slide2.document.close()
+}
+lefttime=setInterval("slideleft()",30)
+}
+window.onload=fillup
+
+function slideleft(){
+if (iedom){
+if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+else
+cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
+
+if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+else
+cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
+
+}
+else if (document.layers){
+if (ns_slide.left>(actualwidth*(-1)+8))
+ns_slide.left-=copyspeed
+else
+ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+
+if (ns_slide2.left>(actualwidth*(-1)+8))
+ns_slide2.left-=copyspeed
+else
+ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+}
+}
+
+
+if (iedom||document.layers){
+with (document){
+document.write('<table border="0" cellspacing="0" cellpadding="0"><td>')
+if (iedom){
+write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed">')
+write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+write('</div></div>')
+}
+else if (document.layers){
+write('<ilayer width="+sliderwidth+" height="+sliderheight+" name="ns_slidemenu" bgcolor="+slidebgcolor+">')
+write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu2"></layer>')
+write('<layer left="0" top="0" onmouseover="copyspeed=0" onmouseout="copyspeed=slidespeed" name="ns_slidemenu3"></layer>')
+write('</ilayer>')
+}
+document.write('</td></table>')
+}
+}
+</script> 
+</body>
+</html>

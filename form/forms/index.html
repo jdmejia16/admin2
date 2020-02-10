@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Formulario Contacto</title>
+
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-basic.css">
+
+</head>
+
+
+	<header>
+		<h1>Ingresa los datos requeridos</h1>
+        <a href="">Registrate</a>
+    </header>
+        <br>
+    <div class="main-content">
+
+        <!-- You only need this form and the form-basic.css -->
+
+        <form class="form-basic" method="post" action="#">
+
+            <div class="form-title-row">
+                <h1>Formulario de Registro</h1>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Nombres</span>
+                    <input type="text" name="nombre_" id="nombres_" required="required" placeholder="Escribe tus nombres">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Apellidos</span>
+                    <input type="text" name="apellidos_" id="apellidos_" required="required" placeholder="Escribe tus apellidos">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Telefono</span>
+                    <input type="number" name="telefono_" id="telefono_" required="required" placeholder="Escribe tu telefono">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Edad</span>
+                    <input type="number" name="edad_" id="edad_" required="required" placeholder="Escribe tu edad">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Correo</span>
+                    <input type="email" name="correo_" id="correo_" required="required" placeholder="Escribe tu email">
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Dropdown</span>
+                    <select name="dropdown">
+                        <option>Option One</option>
+                        <option>Option Two</option>
+                        <option>Option Three</option>
+                        <option>Option Four</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Textarea</span>
+                    <textarea name="textarea"></textarea>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Checkbox</span>
+                    <input type="checkbox" name="checkbox" checked>
+                </label>
+            </div>
+
+            <div class="form-row">
+                <label><span>Radio</span></label>
+                <div class="form-radio-buttons">
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio">
+                            <span>Radio option 1</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio">
+                            <span>Radio option 2</span>
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="radio" name="radio">
+                            <span>Radio option 3</span>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
