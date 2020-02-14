@@ -42,7 +42,7 @@
     </style>
 </head>
 <body>
-	<?php
+	/<?php
 		$nombre=$_POST['nombre'];
 		$correo=$_POST['correo'];
 		$mensaje=$_POST['mensaje'];
@@ -57,6 +57,40 @@
 		 	else{
 		 		echo ("<p>Lo lamento su correo no fue enviado, vuelve a intentarlo.</p>");
 		 	}
-	?>
+	?>/
+	
+	  ?php
+
+        $resul="";
+        if(isset($_POST['submit'])){
+          require 'phpmailer/PHPMailerAutoload.php';
+          $mail = new PHPMailer;
+          $mailer->isSMTP();
+          $mail->HOst='smtp.gmail.com';
+          $mail->Port=587;
+          $mailSMTPAuth=true;
+          $mail->SMTPSecure='tls';
+          $mail->Usernmae='jdmejia016@gmail.com';
+          $mail->Password='rojocampeon1936';
+
+          $mail->setFrom($_POST['email'],$_POST['nombre']);
+          $mail->addAddress('jdmejia016@gmail.com');
+          $mail->addReplyTo($_POST['email'],$_POST['nombre']);
+
+          $mail->isHTML(true);
+          $mail->Subject='Enviado por '.$_POST['nombre'];
+          $mail->Body='<h1 align=center>Nombre: '.$_POST['nombre'].'<br>Email: '.$_POST['email'].'<br>Mensaje: '.$_POST['mensaje'].'</h1>';
+
+          if(!$mail->send()){
+          $result="Mensaje no Enviado, inténtelo de nuevo por favor";
+          }
+
+          else
+          {
+            $result="Gracias ".$_POST['NOMBRE']." por escribir, me pondre en contacto lo mas pronto posible!";
+          }
+
+      }
+    ?
 </body>
 </html>
