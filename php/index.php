@@ -53,15 +53,15 @@
 		$mail->isSMTP();
 		
 		$mail->SMTPDebug = 0;
-		$mail->Host = 'juandiegomejiac@gmail.com';
+		$mail->Host = 'smtp.gmail.com';
 		$mail->Port = 587;
 		$mail->SMTPSecure = 'tls';
 		$mail->SMTPAuth = true;
 		$mail->Username = "juandiegomejiac@gmail.com";
-		$mail->Password = "guatemala1821";
-		$mail->setFrom('juandiegomejiac@gmail.com', 'usuario');
-		$mail->addAddress('juandiegomejiac@gmail.com', _'usuario'_);
-		$mail->Subject = 'activa tu cuenta - Ace Books';
+		$mail->Password = "rojocampeon1936";
+		$mail->setFrom('juandiegomejiac@gmail.com', 'Juan Diego');
+		$mail->addAddress('juandiegomejiac@gmail.com', _'Juan Diego'_);
+		$mail->Subject = 'Activa tu cuenta - Juan Diego';
 		$mail->Body = "<a href='https://www.jdesigner.cf/'> Ir a Jdesigner </a>";
 		$mail->IsHTML(true);
 	
