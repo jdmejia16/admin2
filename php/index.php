@@ -43,20 +43,14 @@
 </head>
 <body>
 	<?php
-		$nombre=$_POST['nombre'];
-		$correo=$_POST['correo'];
-		$mensaje=$_POST['mensaje'];
-
-		$mailsend=mail('juandiegomejiac@gmail.com', 'Nuevo Mensaje', "Nombre: $nombre\r\nCorreo: $correo\r\nMensaje: $mensaje\r\n");
-
-		if ($mailsend){
-			echo ("<p>Bienvenid@ a mi página web <strong>$nombre.</strong> Tu mensaje a sido enviado, me comunicare con usted lo antes posible.</p> 
-				</p><img src='gracias.gif' alt='gracias por visitar mi página web' width='100%' height='100%'></p>
-				<p><strong>Por Visitar mi Web.</strong></p>");
-		}
-		 	else{
-		 		echo ("<p>Lo lamento su correo no fue enviado, vuelve a intentarlo.</p>");
-		 	}
+		requiere 'PHPMailer.php';
+		requiere 'SMTP.php';
+		requiere 'Exception.php';
+		requiere 'OAuth.php';
+	
+		$mail = new PHPMailer\PHPMailer\PHPMailer();
+	
+	
 	?>
 </body>
 </html>
