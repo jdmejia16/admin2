@@ -50,6 +50,20 @@
 	
 		$mail = new PHPMailer\PHPMailer\PHPMailer();
 	
+		$mail->isSMTP();
+		
+		$mail->SMTPDebug = 0;
+		$mail->Host = 'juandiegomejiac@gmail.com';
+		$mail->Port = 587;
+		$mail->SMTPSecure = 'tls';
+		$mail->SMTPAuth = true;
+		$mail->Username = "juandiegomejiac@gmail.com";
+		$mail->Password = "guatemala1821";
+		$mail->setFrom('juandiegomejiac@gmail.com', 'usuario');
+		$mail->addAddress('juandiegomejiac@gmail.com', _'usuario'_);
+		$mail->
+		
+	
 	
 	?>
 </body>
