@@ -61,9 +61,18 @@
 		$mail->Password = "guatemala1821";
 		$mail->setFrom('juandiegomejiac@gmail.com', 'usuario');
 		$mail->addAddress('juandiegomejiac@gmail.com', _'usuario'_);
-		$mail->
-		
+		$mail->Subject = 'activa tu cuenta - Ace Books';
+		$mail->Body = "<a href='https://www.jdesigner.cf/'> Ir a Jdesigner </a>";
+		$mail->IsHTML(true);
 	
+		if (!$mail->send())
+		{
+			echo "Error al enviar el E-Mail: ".$MAIL->ErrorInfo;
+		}
+			else
+			{
+				echo "E-Mail Enviado";
+			}	
 	
 	?>
 </body>
